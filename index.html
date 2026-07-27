@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official website of fantasy author B.R. Doyll, creator of The Ballad of Fin Ger’Bang.">
+  <meta name="theme-color" content="#121210">
+  <title>B.R. Doyll | Fantasy Author</title>
+  <style>
+    :root{--ink:#eee9df;--muted:#b9b0a1;--gold:#b89a5b;--gold-pale:#d6c08d;--line:rgba(214,192,141,.24);--paper:#171714;--max:1180px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:radial-gradient(circle at 82% 8%,rgba(184,154,91,.08),transparent 28rem),linear-gradient(180deg,#11110f 0%,var(--paper) 100%);font-family:Georgia,"Times New Roman",serif;line-height:1.65}
+    a{color:inherit} button{font:inherit}
+    .shell{width:min(calc(100% - 2rem),var(--max));margin-inline:auto}
+    .site-header{min-height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .wordmark{display:inline-flex;align-items:center;gap:.9rem;text-decoration:none}
+    .wordmark-mark{display:grid;place-items:center;width:46px;height:46px;border:1px solid var(--gold);color:var(--gold-pale);font-size:.72rem;letter-spacing:.13em}
+    .wordmark-name{font-size:1.05rem;letter-spacing:.16em;text-transform:uppercase}
+    .site-nav{display:flex;gap:1.5rem;font-size:.9rem;letter-spacing:.08em}
+    .site-nav a,.footer a,.text-link{color:var(--muted);text-decoration:none}
+    .site-nav a:hover,.footer a:hover,.text-link:hover{color:var(--gold-pale)}
+    .hero{min-height:72vh;display:grid;align-content:center;max-width:920px;padding:8rem 0 7rem}
+    .eyebrow{margin:0 0 1rem;color:var(--gold-pale);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase}
+    h1,h2{margin:0;font-weight:500;line-height:1.08} h1{max-width:920px;font-size:clamp(3rem,8vw,7rem);letter-spacing:-.045em} h2{font-size:clamp(2.2rem,5vw,4.4rem)}
+    .hero-copy,.featured-copy>p:not(.eyebrow):not(.featured-tagline),.about-copy p,.contact>p{max-width:680px;color:var(--muted);font-size:1.08rem}
+    .hero-copy{margin:2rem 0;font-size:clamp(1.08rem,2vw,1.3rem)} .text-link{width:fit-content;font-size:.95rem;letter-spacing:.06em}
+    .featured{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(3rem,8vw,8rem);align-items:center;padding:8rem 0;border-top:1px solid var(--line)}
+    .featured-tagline{color:var(--gold-pale);font-style:italic;font-size:1.25rem}
+    .button{display:inline-block;margin-top:1rem;padding:.9rem 1.2rem;border:1px solid var(--gold);background:transparent;color:var(--ink);text-decoration:none;letter-spacing:.08em;font-size:.82rem;text-transform:uppercase;cursor:pointer}
+    .button:hover{background:var(--gold);color:#15130f}
+    .book-gateway{min-height:470px;padding:1rem;border:1px solid var(--line);background:linear-gradient(rgba(14,14,13,.72),rgba(14,14,13,.86)),radial-gradient(circle at 50% 20%,rgba(184,154,91,.22),transparent 42%)}
+    .book-gateway-inner{min-height:438px;display:grid;place-content:center;text-align:center;border:1px solid rgba(214,192,141,.4);outline:1px solid rgba(214,192,141,.12);outline-offset:-10px}
+    .book-gateway strong{display:block;font-size:clamp(3rem,6vw,5rem);font-weight:500;line-height:.95}.book-gateway span:not(.gateway-kicker){color:var(--gold-pale);font-size:1.3rem;font-style:italic}
+    .gateway-kicker{margin-bottom:1.2rem;color:var(--muted);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase}
+    .about{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(3rem,8vw,8rem);align-items:center;padding:8rem 0;border-top:1px solid var(--line)}
+    .portrait-placeholder{aspect-ratio:4/5;display:grid;place-content:center;text-align:center;border:1px solid var(--line);background:linear-gradient(145deg,rgba(184,154,91,.1),transparent 60%),#1b1a17;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+    .portrait-placeholder small{display:block;margin-top:.35rem;color:var(--gold-pale);font-size:.65rem}.contact{padding:8rem 0;border-top:1px solid var(--line)}
+    .footer{min-height:100px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+    .ballad-view{display:none;min-height:100vh;color:#d8c49a;background:radial-gradient(circle at 50% 34%,rgba(123,92,45,.18),transparent 28rem),linear-gradient(180deg,#090b0d 0%,#121312 55%,#090909 100%)}
+    body.ballad-mode .author-view{display:none} body.ballad-mode .ballad-view{display:block}
+    .ballad-header{width:min(calc(100% - 2rem),var(--max));margin:auto;padding:1.5rem 0}.return-button{border:0;background:transparent;color:#a79a81;letter-spacing:.08em;font-size:.82rem;cursor:pointer}.return-button:hover{color:#d8c49a}
+    .ballad-main{min-height:calc(100vh - 80px);display:grid;place-content:center;text-align:center;padding:4rem 1rem 8rem}.ballad-kicker,.ballad-coming{color:#9e9074;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase}
+    .ballad-title{margin:1rem 0;font-size:clamp(4rem,12vw,9rem);line-height:.82;font-weight:500;letter-spacing:-.055em}.ballad-title span{display:block;color:#d8c49a;font-size:.42em;font-style:italic;letter-spacing:-.02em}
+    .ballad-tagline{color:#b5a786;font-size:clamp(1.1rem,3vw,1.6rem);font-style:italic}.ornament{margin:2.5rem auto;color:#7f6440;font-size:1.4rem}.ballad-coming{max-width:34rem;margin-inline:auto}
+    @media(max-width:760px){.site-header{align-items:flex-start;padding:1.2rem 0}.site-nav{gap:.8rem;font-size:.78rem}.wordmark-name{display:none}.hero{min-height:auto;padding:6rem 0}.featured,.about{grid-template-columns:1fr;padding:6rem 0}.book-gateway{min-height:390px}.book-gateway-inner{min-height:358px}.portrait-placeholder{width:min(100%,360px)}.footer{flex-direction:column;justify-content:center;gap:.5rem}}
+  </style>
+</head>
+<body>
+  <div class="author-view">
+    <header class="site-header shell">
+      <a class="wordmark" href="#top"><span class="wordmark-mark">BRD</span><span class="wordmark-name">B.R. Doyll</span></a>
+      <nav class="site-nav"><a href="#work">Books</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    </header>
+    <main class="shell">
+      <section class="hero" id="top"><p class="eyebrow">Fantasy author</p><h1>Stories of memory, consequence, and the songs that refuse to die.</h1><p class="hero-copy">B.R. Doyll writes character-driven fantasy where legends linger, the dead are rarely finished, and every song carries a cost.</p><a class="text-link" href="#work">Discover the current work →</a></section>
+      <section class="featured" id="work"><div class="featured-copy"><p class="eyebrow">Current work</p><h2>The Ballad of Fin Ger’Bang</h2><p class="featured-tagline">Some legends are sung. Others are still singing.</p><p>A fantasy story of music, memory, stubborn ghosts, and an adventuring company drawn toward a bard whose songs open more than old wounds.</p><button class="button" type="button" data-enter-ballad>Enter the Ballad</button></div><div class="book-gateway"><div class="book-gateway-inner"><span class="gateway-kicker">Book One</span><strong>The Ballad</strong><span>of Fin Ger’Bang</span></div></div></section>
+      <section class="about" id="about"><div class="portrait-placeholder"><span>Author portrait</span><small>forthcoming</small></div><div class="about-copy"><p class="eyebrow">About the author</p><h2>B.R. Doyll</h2><p>B.R. Doyll writes fantasy built around voice, character, humor, loss, and the strange ways stories survive the people who first lived them.</p><p>This space will grow alongside the books: a home for finished work, works in progress, maps, lore, and the occasional song that should probably have stayed buried.</p></div></section>
+      <section class="contact" id="contact"><p class="eyebrow">Stay in the story</p><h2>News from B.R. Doyll</h2><p>A reader newsletter is coming. For now, publishing, media, and general inquiries can be sent directly.</p><a class="button" href="mailto:hello@brdoyll.com">hello@brdoyll.com</a></section>
+    </main>
+    <footer class="footer shell"><span>© <span id="year">2026</span> B.R. Doyll</span><button class="return-button" type="button" data-enter-ballad>Enter Fin’s world</button></footer>
+  </div>
+  <div class="ballad-view" aria-hidden="true"><header class="ballad-header"><button class="return-button" type="button" data-return-author>← Return to B.R. Doyll</button></header><main class="ballad-main"><p class="ballad-kicker">Book One</p><h1 class="ballad-title">The Ballad<span>of Fin Ger’Bang</span></h1><p class="ballad-tagline">Some legends are sung. Others are still singing.</p><div class="ornament">✦</div><p class="ballad-coming">The world of the Ballad is being prepared.</p></main></div>
+  <script>
+    const authorView=document.querySelector('.author-view');const balladView=document.querySelector('.ballad-view');
+    function openBallad(){document.body.classList.add('ballad-mode');authorView.setAttribute('aria-hidden','true');balladView.setAttribute('aria-hidden','false');location.hash='ballad';scrollTo(0,0);document.title='The Ballad of Fin Ger’Bang | B.R. Doyll'}
+    function openAuthor(){document.body.classList.remove('ballad-mode');authorView.setAttribute('aria-hidden','false');balladView.setAttribute('aria-hidden','true');location.hash='top';scrollTo(0,0);document.title='B.R. Doyll | Fantasy Author'}
+    document.querySelectorAll('[data-enter-ballad]').forEach(b=>b.addEventListener('click',openBallad));document.querySelectorAll('[data-return-author]').forEach(b=>b.addEventListener('click',openAuthor));if(location.hash==='#ballad')openBallad();document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
